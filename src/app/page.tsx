@@ -369,19 +369,23 @@ export default function HomePage() {
       <section className="relative overflow-hidden py-20">
         <div className="container-custom relative z-10">
           <div className="glass-card relative rounded-3xl p-12 text-center overflow-hidden">
-            <div className="mesh-bg" aria-hidden>
-              <div className="mesh-blob animate-float-slow" style={{ width: 400, height: 400, top: -120, left: "10%", background: "radial-gradient(circle, #3b82f6, transparent 70%)", opacity: 0.35 }} />
-              <div className="mesh-blob animate-float-slower" style={{ width: 440, height: 440, bottom: -160, right: "5%", background: "radial-gradient(circle, #22d3ee, transparent 70%)", opacity: 0.35 }} />
-            </div>
+            <div
+              className="absolute inset-0 opacity-70 pointer-events-none"
+              aria-hidden
+              style={{
+                backgroundImage:
+                  "radial-gradient(600px circle at 15% 15%, rgba(37,99,235,0.28), transparent 60%), radial-gradient(600px circle at 85% 85%, rgba(34,211,238,0.22), transparent 60%)",
+              }}
+            />
             <div className="relative z-10">
               <Reveal>
                 <h2 className="text-3xl md:text-5xl font-black mb-4 text-white">
-                  Ready to Grow Your Business?
+                  Let&apos;s Build Your Growth Engine
                 </h2>
               </Reveal>
               <Reveal delay={100}>
                 <p className="text-gray-300 text-lg mb-8 max-w-xl mx-auto">
-                  Book a free 30-minute discovery call and let&apos;s build a strategy tailored to your goals.
+                  Prefer to talk now? Reach us instantly on WhatsApp, or book a free 30-minute discovery call.
                 </p>
               </Reveal>
               <Reveal delay={200}>

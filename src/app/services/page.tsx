@@ -128,9 +128,14 @@ export default function ServicesPage() {
       <section className="relative overflow-hidden py-20">
         <div className="container-custom relative z-10 max-w-3xl mx-auto">
           <div className="glass-card relative rounded-3xl p-12 text-center overflow-hidden">
-            <div className="mesh-bg" aria-hidden>
-              <div className="mesh-blob animate-float-slower" style={{ width: 440, height: 440, top: -160, left: "30%", background: "radial-gradient(circle, #2563eb, transparent 70%)", opacity: 0.35 }} />
-            </div>
+            <div
+              className="absolute inset-0 opacity-70 pointer-events-none"
+              aria-hidden
+              style={{
+                backgroundImage:
+                  "radial-gradient(600px circle at 15% 15%, rgba(37,99,235,0.28), transparent 60%), radial-gradient(600px circle at 85% 85%, rgba(34,211,238,0.22), transparent 60%)",
+              }}
+            />
             <div className="relative z-10">
               <Reveal>
                 <h2 className="text-3xl md:text-4xl font-black mb-4 text-white">Not Sure Which Service You Need?</h2>
