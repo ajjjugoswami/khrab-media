@@ -39,7 +39,7 @@ export default function ContactForm() {
           value={form.name}
           onChange={handleChange}
           placeholder="Your full name"
-          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-white placeholder:text-gray-500"
+          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-white placeholder:text-gray-500"
         />
       </div>
 
@@ -55,7 +55,7 @@ export default function ContactForm() {
           value={form.email}
           onChange={handleChange}
           placeholder="you@example.com"
-          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-white placeholder:text-gray-500"
+          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-white placeholder:text-gray-500"
         />
       </div>
 
@@ -70,7 +70,7 @@ export default function ContactForm() {
           value={form.phone}
           onChange={handleChange}
           placeholder="+91 XXXXX XXXXX"
-          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-white placeholder:text-gray-500"
+          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-white placeholder:text-gray-500"
         />
       </div>
 
@@ -86,7 +86,7 @@ export default function ContactForm() {
           value={form.message}
           onChange={handleChange}
           placeholder="Tell us about your business and goals..."
-          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-white placeholder:text-gray-500 resize-none"
+          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-white placeholder:text-gray-500 resize-none"
         />
       </div>
 

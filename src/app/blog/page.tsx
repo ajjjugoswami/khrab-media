@@ -41,7 +41,7 @@ export default function BlogPage() {
           <div className="mesh-blob animate-float-slower" style={{ width: 380, height: 380, bottom: -160, right: -40, background: "radial-gradient(circle, #06b6d4, transparent 70%)" }} />
         </div>
         <div className="container-custom relative z-10 text-center max-w-2xl mx-auto">
-          <span className="text-blue-400 font-semibold text-sm uppercase tracking-widest">Our Blog</span>
+          <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">Our Blog</span>
           <h1 className="text-4xl md:text-5xl font-black text-white mt-3 mb-5">
             Digital Marketing <span className="text-gradient">Insights &amp; Strategies</span>
           </h1>
@@ -59,8 +59,8 @@ export default function BlogPage() {
               key={cat}
               className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap cursor-pointer transition-colors ${
                 i === 0
-                  ? "bg-linear-to-r from-blue-600 to-cyan-500 text-white"
-                  : "glass text-gray-300 hover:text-blue-400"
+                  ? "bg-linear-to-r from-amber-500 to-amber-400 text-[#0a1220]"
+                  : "glass text-gray-300 hover:text-amber-400"
               }`}
             >
               {cat}
@@ -79,7 +79,7 @@ export default function BlogPage() {
                   href={`/blog/${post.slug}`}
                   className="card-hover glass-card group block h-full rounded-2xl overflow-hidden"
                 >
-                  <div className="relative bg-linear-to-br from-blue-600 to-indigo-700 h-48 flex items-end p-5 overflow-hidden">
+                  <div className="relative bg-linear-to-br from-amber-500 to-orange-600 h-48 flex items-end p-5 overflow-hidden">
                     <div className="absolute inset-0 opacity-30 transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: "radial-gradient(circle at 30% 20%, white 0, transparent 50%)" }} />
                     <span className="relative glass text-white text-xs font-semibold px-3 py-1 rounded-full">
                       {post.category}
@@ -91,11 +91,11 @@ export default function BlogPage() {
                       <span>·</span>
                       <span>{post.readTime}</span>
                     </div>
-                    <h2 className="text-lg font-black text-white mb-3 group-hover:text-blue-300 transition-colors leading-snug">
+                    <h2 className="text-lg font-black text-white mb-3 group-hover:text-amber-300 transition-colors leading-snug">
                       {post.title}
                     </h2>
                     <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">{post.excerpt}</p>
-                    <p className="text-blue-400 font-semibold text-sm mt-4 group-hover:gap-2 flex items-center gap-1 transition-all">
+                    <p className="text-amber-400 font-semibold text-sm mt-4 group-hover:gap-2 flex items-center gap-1 transition-all">
                       Read Article <span>→</span>
                     </p>
                   </div>

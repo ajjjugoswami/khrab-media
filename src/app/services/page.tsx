@@ -52,7 +52,7 @@ export default function ServicesPage() {
         </div>
         <div className="container-custom relative z-10 text-center max-w-3xl mx-auto">
           <Reveal>
-            <span className="text-blue-400 font-semibold text-sm uppercase tracking-widest">Our Services</span>
+            <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">Our Services</span>
           </Reveal>
           <Reveal delay={80}>
             <h1 className="text-4xl md:text-5xl font-black text-white mt-3 mb-5">
@@ -105,7 +105,7 @@ export default function ServicesPage() {
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-linear-to-t from-[#0a0f1e] via-[#0a0f1e]/40 to-transparent" />
-                      <div className="absolute bottom-3 left-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-blue-600 to-cyan-500 text-white shadow-lg">
+                      <div className="absolute bottom-3 left-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-amber-500 to-amber-400 text-[#0a1220] shadow-lg">
                         <Icon className="h-6 w-6" />
                       </div>
                     </div>

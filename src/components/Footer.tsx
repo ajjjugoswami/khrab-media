@@ -83,17 +83,17 @@ export default function Footer() {
 
             {/* Services */}
             <div className="md:col-span-3 md:pt-1">
-              <h3 className="relative text-white font-bold mb-5 text-sm tracking-wide inline-block after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-8 after:rounded-full after:bg-linear-to-r after:from-blue-500 after:to-cyan-400">Services</h3>
+              <h3 className="relative text-white font-bold mb-5 text-sm tracking-wide inline-block after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-8 after:rounded-full after:bg-linear-to-r after:from-amber-500 after:to-amber-400">Services</h3>
               <ul className="space-y-3 text-sm">
                 {featuredServices.map((s) => (
                   <li key={s.slug}>
-                    <Link href={`/services#${s.slug}`} className="text-gray-400 hover:text-blue-400 transition-colors">
+                    <Link href={`/services#${s.slug}`} className="text-gray-400 hover:text-amber-400 transition-colors">
                       {s.short}
                     </Link>
                   </li>
                 ))}
                 <li>
-                  <Link href="/services" className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium transition-colors">
+                  <Link href="/services" className="inline-flex items-center gap-1 text-amber-400 hover:text-amber-300 font-medium transition-colors">
                     View All <ArrowUpRight className="h-3.5 w-3.5" />
                   </Link>
                 </li>
@@ -102,7 +102,7 @@ export default function Footer() {
 
             {/* Company */}
             <div className="md:col-span-2 md:pt-1">
-              <h3 className="relative text-white font-bold mb-5 text-sm tracking-wide inline-block after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-8 after:rounded-full after:bg-linear-to-r after:from-blue-500 after:to-cyan-400">Company</h3>
+              <h3 className="relative text-white font-bold mb-5 text-sm tracking-wide inline-block after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-8 after:rounded-full after:bg-linear-to-r after:from-amber-500 after:to-amber-400">Company</h3>
               <ul className="space-y-3 text-sm">
                 {[
                   { href: "/", label: "Home" },
@@ -112,7 +112,7 @@ export default function Footer() {
                   { href: "/contact", label: "Contact" },
                 ].map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className="text-gray-400 hover:text-blue-400 transition-colors">
+                    <Link href={l.href} className="text-gray-400 hover:text-amber-400 transition-colors">
                       {l.label}
                     </Link>
                   </li>
@@ -122,17 +122,17 @@ export default function Footer() {
 
             {/* Contact */}
             <div className="md:col-span-3 md:pt-1">
-              <h3 className="relative text-white font-bold mb-5 text-sm tracking-wide inline-block after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-8 after:rounded-full after:bg-linear-to-r after:from-blue-500 after:to-cyan-400">Get in Touch</h3>
+              <h3 className="relative text-white font-bold mb-5 text-sm tracking-wide inline-block after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-8 after:rounded-full after:bg-linear-to-r after:from-amber-500 after:to-amber-400">Get in Touch</h3>
               <ul className="space-y-3.5 text-sm">
                 <li>
-                  <a href={`tel:${SITE.phone}`} className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2.5">
-                    <FiPhone className="h-4 w-4 shrink-0 text-blue-400" />
+                  <a href={`tel:${SITE.phone}`} className="text-gray-400 hover:text-amber-400 transition-colors flex items-center gap-2.5">
+                    <FiPhone className="h-4 w-4 shrink-0 text-amber-400" />
                     {SITE.phone}
                   </a>
                 </li>
                 <li>
-                  <a href={`mailto:${SITE.email}`} className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2.5">
-                    <FiMail className="h-4 w-4 shrink-0 text-blue-400" />
+                  <a href={`mailto:${SITE.email}`} className="text-gray-400 hover:text-amber-400 transition-colors flex items-center gap-2.5">
+                    <FiMail className="h-4 w-4 shrink-0 text-amber-400" />
                     {SITE.email}
                   </a>
                 </li>

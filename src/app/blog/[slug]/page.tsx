@@ -61,11 +61,11 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="mesh-blob animate-float-slower" style={{ width: 420, height: 420, bottom: -160, right: "10%", background: "radial-gradient(circle, #6366f1, transparent 70%)" }} />
         </div>
         <div className="container-custom relative z-10 max-w-3xl mx-auto text-center">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm mb-6 transition-colors">
+          <Link href="/blog" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 text-sm mb-6 transition-colors">
             ← Back to Blog
           </Link>
           <div>
-            <span className="inline-block glass text-blue-300 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+            <span className="inline-block glass text-amber-300 text-xs font-semibold px-3 py-1 rounded-full mb-4">
               {post.category}
             </span>
           </div>
@@ -140,10 +140,10 @@ export default async function BlogPostPage({ params }: Props) {
                   href={`/blog/${p.slug}`}
                   className="card-hover glass-card group rounded-2xl overflow-hidden"
                 >
-                  <div className="bg-linear-to-br from-blue-600 to-indigo-700 h-32" />
+                  <div className="bg-linear-to-br from-amber-500 to-orange-600 h-32" />
                   <div className="p-5">
                     <span className="text-xs text-gray-500">{p.date}</span>
-                    <h3 className="font-bold text-white mt-1 group-hover:text-blue-300 transition-colors line-clamp-2">
+                    <h3 className="font-bold text-white mt-1 group-hover:text-amber-300 transition-colors line-clamp-2">
                       {p.title}
                     </h3>
                   </div>

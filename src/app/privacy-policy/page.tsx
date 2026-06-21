@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-xl font-bold text-white">Data Security</h2>
           <p>We implement industry-standard security measures to protect your personal information against unauthorized access, alteration, or disclosure.</p>
           <h2 className="text-xl font-bold text-white">Contact Us</h2>
-          <p>If you have any questions about this Privacy Policy, please contact us at <a href={`mailto:${SITE.email}`} className="text-blue-400 hover:text-blue-300">{SITE.email}</a>.</p>
+          <p>If you have any questions about this Privacy Policy, please contact us at <a href={`mailto:${SITE.email}`} className="text-amber-400 hover:text-amber-300">{SITE.email}</a>.</p>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { SITE, STATS, SERVICES, TESTIMONIALS, FAQS, BLOG_POSTS } from "@/lib/data";
 import Reveal from "@/components/Reveal";
 import CountUp from "@/components/CountUp";
@@ -71,10 +72,10 @@ export default function HomePage() {
 
         <div className="container-custom relative z-10 text-center max-w-4xl mx-auto">
           <Reveal>
-            <span className="inline-flex items-center gap-2 glass text-blue-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+            <span className="inline-flex items-center gap-2 glass text-amber-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75 animate-ping" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500" />
+                <span className="absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75 animate-ping" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-500" />
               </span>
               India&apos;s Results-Driven Digital Marketing Agency
             </span>
@@ -128,7 +129,7 @@ export default function HomePage() {
           {[...TRUST_WORDS, ...TRUST_WORDS].map((word, i) => (
             <span key={i} className="text-gray-500 font-semibold text-sm uppercase tracking-widest flex items-center gap-12">
               {word}
-              <span className="text-blue-500/60">&#9670;</span>
+              <span className="text-amber-500/60">&#9670;</span>
             </span>
           ))}
         </div>
@@ -157,7 +158,7 @@ export default function HomePage() {
       <section className="py-24">
         <div className="container-custom">
           <Reveal className="text-center mb-14">
-            <span className="text-blue-400 font-semibold text-sm uppercase tracking-widest">What We Do</span>
+            <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">What We Do</span>
             <h2 className="text-3xl md:text-4xl font-black text-white mt-2 mb-4">
               Full-Stack Digital Marketing Services
             </h2>
@@ -172,19 +173,31 @@ export default function HomePage() {
                 <Reveal key={service.slug} delay={(i % 3) * 90}>
                   <Link
                     href={`/services#${service.slug}`}
-                    className="card-hover glass-card group relative block h-full p-7 rounded-2xl overflow-hidden"
+                    className="card-hover glass-card group relative block h-full rounded-2xl overflow-hidden"
                   >
-                    <span className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-blue-500 to-cyan-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-                    <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-blue-600 to-cyan-500 text-white mb-4 shadow-lg shadow-blue-500/30 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
-                      <Icon className="h-7 w-7" />
+                    {/* Real service image */}
+                    <div className="relative h-40 overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-t from-[#0a1220] via-[#0a1220]/40 to-transparent" />
+                      <div className="absolute bottom-3 left-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-amber-500 to-amber-400 text-[#0a1220] shadow-lg">
+                        <Icon className="h-5 w-5" />
+                      </div>
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-blue-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                      Learn more <FiArrowRight className="h-4 w-4" />
-                    </span>
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">{service.description}</p>
+                      <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-amber-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                        Learn more <FiArrowRight className="h-4 w-4" />
+                      </span>
+                    </div>
                   </Link>
                 </Reveal>
               );
@@ -206,7 +219,7 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <Reveal>
-              <span className="text-blue-400 font-semibold text-sm uppercase tracking-widest">Why Kharb Media</span>
+              <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">Why Kharb Media</span>
               <h2 className="text-3xl md:text-4xl font-black text-white mt-2 mb-6">
                 We Don&apos;t Just Run Campaigns &mdash; We Drive Growth
               </h2>
@@ -219,7 +232,7 @@ export default function HomePage() {
                 ].map((item, i) => (
                   <Reveal key={item.title} delay={i * 80}>
                     <div className="card-hover glass flex gap-4 rounded-xl p-4">
-                      <span className="shrink-0 flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-blue-600 to-cyan-500 text-white shadow-md shadow-blue-500/30">
+                      <span className="shrink-0 flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-amber-500 to-amber-400 text-[#0a1220] shadow-md shadow-amber-500/20">
                         <item.Icon className="h-5 w-5" />
                       </span>
                       <div>
@@ -234,7 +247,7 @@ export default function HomePage() {
 
             <Reveal delay={150}>
               <div className="relative">
-                <div className="absolute -inset-4 bg-linear-to-br from-blue-600/30 to-cyan-500/30 rounded-3xl blur-3xl" aria-hidden />
+                <div className="absolute -inset-4 bg-linear-to-br from-amber-500/30 to-amber-400/30 rounded-3xl blur-3xl" aria-hidden />
                 <div className="glass-card relative rounded-3xl p-8 overflow-hidden">
                   <p className="text-6xl font-black text-gradient mb-2">
                     <CountUp value="8+" />
@@ -243,7 +256,7 @@ export default function HomePage() {
                   <p className="text-gray-400 leading-relaxed mb-6">
                     Founded by Vivek Kharb, our agency brings 8 years of hands-on digital marketing expertise to every client engagement. We&apos;ve helped businesses across industries multiply their revenue through smart, scalable strategies.
                   </p>
-                  <Link href="/about" className="inline-flex items-center gap-1 text-blue-400 font-semibold hover:gap-2 transition-all">
+                  <Link href="/about" className="inline-flex items-center gap-1 text-amber-400 font-semibold hover:gap-2 transition-all">
                     Meet Our Team <FiArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
@@ -257,7 +270,7 @@ export default function HomePage() {
       <section className="py-24">
         <div className="container-custom">
           <Reveal className="text-center mb-14">
-            <span className="text-blue-400 font-semibold text-sm uppercase tracking-widest">Client Reviews</span>
+            <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">Client Reviews</span>
             <h2 className="text-3xl md:text-4xl font-black text-white mt-2">
               What Our Clients Say
             </h2>
@@ -282,7 +295,7 @@ export default function HomePage() {
                   </p>
                   <p className="text-gray-300 leading-relaxed mb-5 italic relative z-10">&ldquo;{t.text}&rdquo;</p>
                   <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-br from-blue-600 to-cyan-500 text-white font-bold text-sm">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-br from-amber-500 to-amber-400 text-white font-bold text-sm">
                       {t.name.charAt(0)}
                     </span>
                     <div>
@@ -301,7 +314,7 @@ export default function HomePage() {
       <section className="py-24">
         <div className="container-custom max-w-3xl mx-auto">
           <Reveal className="text-center mb-12">
-            <span className="text-blue-400 font-semibold text-sm uppercase tracking-widest">FAQ</span>
+            <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-white mt-2">
               Frequently Asked Questions
             </h2>
@@ -312,7 +325,7 @@ export default function HomePage() {
                 <details className="card-hover glass-card group rounded-xl overflow-hidden">
                   <summary className="flex cursor-pointer items-center justify-between gap-4 p-5 font-bold text-white list-none">
                     {faq.q}
-                    <span className="shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-blue-500/15 text-blue-400 transition-transform duration-300 group-open:rotate-45">
+                    <span className="shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-amber-500/15 text-amber-400 transition-transform duration-300 group-open:rotate-45">
                       +
                     </span>
                   </summary>
@@ -328,7 +341,7 @@ export default function HomePage() {
       <section className="py-24">
         <div className="container-custom">
           <Reveal className="text-center mb-14">
-            <span className="text-blue-400 font-semibold text-sm uppercase tracking-widest">Latest Insights</span>
+            <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">Latest Insights</span>
             <h2 className="text-3xl md:text-4xl font-black text-white mt-2">From Our Blog</h2>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -338,15 +351,15 @@ export default function HomePage() {
                   href={`/blog/${post.slug}`}
                   className="card-hover glass-card group block h-full rounded-2xl overflow-hidden"
                 >
-                  <div className="relative h-44 overflow-hidden bg-linear-to-br from-blue-600 to-indigo-700">
+                  <div className="relative h-44 overflow-hidden bg-linear-to-br from-amber-500 to-orange-600">
                     <div className="absolute inset-0 opacity-30 transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: "radial-gradient(circle at 30% 20%, white 0, transparent 50%)" }} />
-                    <span className="absolute top-3 left-3 glass text-blue-200 text-xs font-semibold px-2.5 py-1 rounded-full">
+                    <span className="absolute top-3 left-3 glass text-amber-200 text-xs font-semibold px-2.5 py-1 rounded-full">
                       {post.category}
                     </span>
                   </div>
                   <div className="p-5">
                     <span className="text-xs text-gray-500">{post.date} &middot; {post.readTime}</span>
-                    <h3 className="font-bold text-white mt-2 mb-2 group-hover:text-blue-300 transition-colors line-clamp-2">
+                    <h3 className="font-bold text-white mt-2 mb-2 group-hover:text-amber-300 transition-colors line-clamp-2">
                       {post.title}
                     </h3>
                     <p className="text-gray-400 text-sm line-clamp-2">{post.excerpt}</p>
@@ -356,7 +369,7 @@ export default function HomePage() {
             ))}
           </div>
           <Reveal className="text-center mt-10">
-            <Link href="/blog" className="inline-flex items-center gap-1 text-blue-400 font-semibold hover:gap-2 transition-all">
+            <Link href="/blog" className="inline-flex items-center gap-1 text-amber-400 font-semibold hover:gap-2 transition-all">
               View All Articles <FiArrowRight className="h-4 w-4" />
             </Link>
           </Reveal>

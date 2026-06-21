@@ -50,7 +50,7 @@ export default function ContactPage() {
           <div className="mesh-blob animate-float-slower" style={{ width: 380, height: 380, bottom: -160, left: -40, background: "radial-gradient(circle, #6366f1, transparent 70%)" }} />
         </div>
         <div className="container-custom relative z-10 text-center max-w-2xl mx-auto">
-          <span className="text-blue-400 font-semibold text-sm uppercase tracking-widest">Contact Us</span>
+          <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">Contact Us</span>
           <h1 className="text-4xl md:text-5xl font-black text-white mt-3 mb-5">
             Let&apos;s Talk About Your <span className="text-gradient">Growth</span>
           </h1>
@@ -69,32 +69,32 @@ export default function ContactPage() {
               <h2 className="text-2xl font-black text-white mb-6">Get In Touch</h2>
               <div className="space-y-6">
                 <div className="flex gap-4 items-start">
-                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/30">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-amber-500 to-amber-400 text-[#0a1220] flex items-center justify-center shrink-0 shadow-md shadow-amber-500/20">
                     <FiPhone className="h-5 w-5" />
                   </div>
                   <div>
                     <p className="font-semibold text-white mb-0.5">Phone</p>
-                    <a href={`tel:${SITE.phone}`} className="text-blue-400 hover:text-blue-300 transition-colors">
+                    <a href={`tel:${SITE.phone}`} className="text-amber-400 hover:text-amber-300 transition-colors">
                       {SITE.phone}
                     </a>
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">
-                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/30">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-amber-500 to-amber-400 text-[#0a1220] flex items-center justify-center shrink-0 shadow-md shadow-amber-500/20">
                     <FiMail className="h-5 w-5" />
                   </div>
                   <div>
                     <p className="font-semibold text-white mb-0.5">Email</p>
-                    <a href={`mailto:${SITE.email}`} className="text-blue-400 hover:text-blue-300 transition-colors block">
+                    <a href={`mailto:${SITE.email}`} className="text-amber-400 hover:text-amber-300 transition-colors block">
                       {SITE.email}
                     </a>
-                    <a href={`mailto:${SITE.email2}`} className="text-blue-400 hover:text-blue-300 transition-colors block">
+                    <a href={`mailto:${SITE.email2}`} className="text-amber-400 hover:text-amber-300 transition-colors block">
                       {SITE.email2}
                     </a>
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">
-                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/30">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-amber-500 to-amber-400 text-[#0a1220] flex items-center justify-center shrink-0 shadow-md shadow-amber-500/20">
                     <FiClock className="h-5 w-5" />
                   </div>
                   <div>
@@ -124,7 +124,7 @@ export default function ContactPage() {
 
               <div className="mt-4 glass-card p-5 rounded-2xl overflow-hidden">
                 <h3 className="font-bold text-white mb-2 flex items-center gap-2">
-                  <FiCalendar className="h-5 w-5 text-blue-400" /> Book a Discovery Call
+                  <FiCalendar className="h-5 w-5 text-amber-400" /> Book a Discovery Call
                 </h3>
                 <p className="text-gray-400 text-sm mb-4">
                   Schedule a free 30-minute strategy session with our team.

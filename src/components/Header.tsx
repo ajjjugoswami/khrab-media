@@ -64,12 +64,12 @@ export default function Header() {
                 key={l.href}
                 href={l.href}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors ${
-                  active ? "text-blue-400" : "text-gray-300 hover:text-blue-400"
+                  active ? "text-amber-400" : "text-gray-300 hover:text-amber-400"
                 }`}
               >
                 {l.label}
                 <span
-                  className={`absolute left-3 right-3 -bottom-0.5 h-0.5 rounded-full bg-linear-to-r from-blue-500 to-cyan-400 origin-left transition-transform duration-300 ${
+                  className={`absolute left-3 right-3 -bottom-0.5 h-0.5 rounded-full bg-linear-to-r from-amber-500 to-amber-400 origin-left transition-transform duration-300 ${
                     active ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
                   }`}
                 />
@@ -82,7 +82,7 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-3">
           <a
             href={`tel:${SITE.phone}`}
-            className="text-sm text-gray-300 hover:text-blue-400 font-medium transition-colors"
+            className="text-sm text-gray-300 hover:text-amber-400 font-medium transition-colors"
           >
             {SITE.phone}
           </a>
@@ -118,7 +118,7 @@ export default function Header() {
               href={l.href}
               onClick={() => setOpen(false)}
               className={`py-2 font-medium transition-colors ${
-                pathname === l.href ? "text-blue-400" : "text-gray-300 hover:text-blue-400"
+                pathname === l.href ? "text-amber-400" : "text-gray-300 hover:text-amber-400"
               }`}
             >
               {l.label}

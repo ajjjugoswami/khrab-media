@@ -55,7 +55,7 @@ export default function AboutPage() {
         </div>
         <div className="container-custom relative z-10 max-w-3xl mx-auto text-center">
           <Reveal>
-            <span className="text-blue-400 font-semibold text-sm uppercase tracking-widest">About Us</span>
+            <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">About Us</span>
           </Reveal>
           <Reveal delay={80}>
             <h1 className="text-4xl md:text-5xl font-black text-white mt-3 mb-5">
@@ -91,7 +91,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <Reveal>
-              <span className="text-blue-400 font-semibold text-sm uppercase tracking-widest">Our Story</span>
+              <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">Our Story</span>
               <h2 className="text-3xl font-black text-white mt-2 mb-5">
                 Built by a Marketer, for Businesses That Want Real Results
               </h2>
@@ -109,7 +109,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={150}>
               <div className="relative">
-                <div className="absolute -inset-4 bg-linear-to-br from-blue-600/20 to-cyan-500/20 rounded-3xl blur-2xl" aria-hidden />
+                <div className="absolute -inset-4 bg-linear-to-br from-amber-500/20 to-amber-400/20 rounded-3xl blur-2xl" aria-hidden />
                 <div className="glass-card relative rounded-3xl overflow-hidden">
                   <Image
                     src="/about-team.webp"
@@ -133,7 +133,7 @@ export default function AboutPage() {
             ].map((v, i) => (
               <Reveal key={v.title} delay={i * 80}>
                 <div className="card-hover glass-card h-full rounded-2xl p-5 overflow-hidden">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-blue-600 to-cyan-500 text-white mb-3 shadow-md shadow-blue-500/30">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-amber-500 to-amber-400 text-[#0a1220] mb-3 shadow-md shadow-amber-500/20">
                     <v.Icon className="h-5 w-5" />
                   </span>
                   <h3 className="font-bold text-white mb-1">{v.title}</h3>
@@ -171,7 +171,7 @@ export default function AboutPage() {
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 100}>
                 <div className="card-hover glass-card h-full rounded-2xl p-7 text-center overflow-hidden">
-                  <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-blue-600 to-cyan-500 text-white mb-4 shadow-lg shadow-blue-500/30 mx-auto">
+                  <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-amber-500 to-amber-400 text-[#0a1220] mb-4 shadow-lg shadow-amber-500/20 mx-auto">
                     <item.Icon className="h-7 w-7" />
                   </span>
                   <h3 className="text-xl font-black text-white mb-3">{item.title}</h3>
@@ -187,18 +187,18 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container-custom">
           <Reveal className="text-center mb-12">
-            <span className="text-blue-400 font-semibold text-sm uppercase tracking-widest">Our Team</span>
+            <span className="text-amber-400 font-semibold text-sm uppercase tracking-widest">Our Team</span>
             <h2 className="text-3xl font-black text-white mt-2">Meet the Experts Behind Your Growth</h2>
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {TEAM.map((member, i) => (
               <Reveal key={member.name} delay={(i % 4) * 80}>
                 <div className="card-hover glass-card h-full text-center rounded-2xl p-6 overflow-hidden">
-                  <div className="w-20 h-20 rounded-full bg-linear-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white text-2xl font-black mx-auto mb-4 shadow-lg shadow-blue-500/30">
+                  <div className="w-20 h-20 rounded-full bg-linear-to-br from-amber-500 to-amber-400 flex items-center justify-center text-[#0a1220] text-2xl font-black mx-auto mb-4 shadow-lg shadow-amber-500/20">
                     {member.name.charAt(0)}
                   </div>
                   <h3 className="font-bold text-white">{member.name}</h3>
-                  <p className="text-blue-400 text-sm font-medium mt-0.5">{member.role}</p>
+                  <p className="text-amber-400 text-sm font-medium mt-0.5">{member.role}</p>
                   <p className="text-gray-500 text-xs mt-1">{member.experience}</p>
                 </div>
               </Reveal>
