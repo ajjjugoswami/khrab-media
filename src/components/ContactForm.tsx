@@ -28,7 +28,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1.5">
+        <label htmlFor="name" className="block text-sm font-semibold text-gray-300 mb-1.5">
           Full Name <span className="text-red-500">*</span>
         </label>
         <input
@@ -39,12 +39,12 @@ export default function ContactForm() {
           value={form.name}
           onChange={handleChange}
           placeholder="Your full name"
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all text-gray-900 placeholder:text-gray-400"
+          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-white placeholder:text-gray-500"
         />
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1.5">
+        <label htmlFor="email" className="block text-sm font-semibold text-gray-300 mb-1.5">
           Email Address <span className="text-red-500">*</span>
         </label>
         <input
@@ -55,12 +55,12 @@ export default function ContactForm() {
           value={form.email}
           onChange={handleChange}
           placeholder="you@example.com"
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all text-gray-900 placeholder:text-gray-400"
+          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-white placeholder:text-gray-500"
         />
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-1.5">
+        <label htmlFor="phone" className="block text-sm font-semibold text-gray-300 mb-1.5">
           Phone Number
         </label>
         <input
@@ -70,12 +70,12 @@ export default function ContactForm() {
           value={form.phone}
           onChange={handleChange}
           placeholder="+91 XXXXX XXXXX"
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all text-gray-900 placeholder:text-gray-400"
+          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-white placeholder:text-gray-500"
         />
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-1.5">
+        <label htmlFor="message" className="block text-sm font-semibold text-gray-300 mb-1.5">
           Message <span className="text-red-500">*</span>
         </label>
         <textarea
@@ -86,31 +86,31 @@ export default function ContactForm() {
           value={form.message}
           onChange={handleChange}
           placeholder="Tell us about your business and goals..."
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all text-gray-900 placeholder:text-gray-400 resize-none"
+          className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-white placeholder:text-gray-500 resize-none"
         />
       </div>
 
       {status === "success" && (
-        <div className="bg-green-50 border border-green-200 text-green-700 rounded-xl px-4 py-3 text-sm font-medium">
-          ✅ Message sent! We&apos;ll get back to you within 24 hours.
+        <div className="bg-green-500/10 border border-green-500/30 text-green-400 rounded-xl px-4 py-3 text-sm font-medium">
+          Message sent! We&apos;ll get back to you within 24 hours.
         </div>
       )}
 
       {status === "error" && (
-        <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm font-medium">
-          ❌ Something went wrong. Please try again or email us directly.
+        <div className="bg-red-500/10 border border-red-500/30 text-red-400 rounded-xl px-4 py-3 text-sm font-medium">
+          Something went wrong. Please try again or email us directly.
         </div>
       )}
 
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full bg-blue-600 text-white font-bold py-3.5 rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+        className="btn-shine w-full bg-linear-to-r from-blue-600 to-cyan-500 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-blue-500/25 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === "sending" ? "Sending..." : "Send Message"}
       </button>
 
-      <p className="text-xs text-gray-400 text-center">
+      <p className="text-xs text-gray-500 text-center">
         We typically respond within 24 hours during business days.
       </p>
     </form>

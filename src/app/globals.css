@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0b1220;
-  --brand: #2563eb;
-  --brand-dark: #1e40af;
-  --accent: #06b6d4;
+  /* Dark-only theme — deep navy with cyan/blue accents */
+  --background: #05080f;
+  --foreground: #e8eef7;
+  --brand: #3b82f6;
+  --brand-dark: #1d4ed8;
+  --accent: #22d3ee;
+  --surface: #0b101d;
+  --surface-2: #0f1525;
+  --border: #1c2438;
+  --muted: #8b97ab;
 }
 
 @theme inline {
@@ -33,17 +38,52 @@ html {
 
 /* ---------- Reusable gradient text ---------- */
 .text-gradient {
-  background: linear-gradient(120deg, #2563eb 0%, #06b6d4 60%, #6366f1 100%);
+  background: linear-gradient(120deg, #60a5fa 0%, #22d3ee 55%, #818cf8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* ---------- Glass surfaces ---------- */
+/* ---------- Glassmorphism surfaces ---------- */
 .glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Stronger glass for cards that need more presence */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* Subtle inner-glow highlight for premium glass */
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    transparent 40%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.glass-nav {
+  background: rgba(6, 10, 20, 0.6);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
 }
 
 /* ---------- Animated gradient mesh background ---------- */
@@ -57,8 +97,8 @@ html {
 .mesh-blob {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(70px);
-  opacity: 0.45;
+  filter: blur(80px);
+  opacity: 0.4;
   will-change: transform;
 }
 
@@ -84,16 +124,6 @@ html {
   animation: gradient-shift 8s ease infinite;
 }
 
-@keyframes shimmer {
-  100% { transform: translateX(100%); }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.45); }
-  50% { box-shadow: 0 0 0 12px rgba(37, 99, 235, 0); }
-}
-.animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
-
 /* ---------- Scroll reveal ---------- */
 .reveal {
   opacity: 0;
@@ -106,13 +136,14 @@ html {
   transform: translateY(0);
 }
 
-/* ---------- Card hover lift + shine ---------- */
+/* ---------- Card hover lift ---------- */
 .card-hover {
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.35s ease, border-color 0.35s ease;
+    box-shadow 0.35s ease, border-color 0.35s ease, background-color 0.3s ease;
 }
 .card-hover:hover {
   transform: translateY(-6px);
+  border-color: rgba(96, 165, 250, 0.4);
 }
 
 /* ---------- Button shine sweep ---------- */
@@ -159,7 +190,6 @@ html {
   .animate-float-slow,
   .animate-float-slower,
   .animate-gradient,
-  .animate-pulse-glow,
   .animate-marquee {
     animation: none;
   }
