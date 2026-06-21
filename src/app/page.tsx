@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE, STATS, SERVICES, TESTIMONIALS, FAQS, BLOG_POSTS } from "@/lib/data";
 import Reveal from "@/components/Reveal";
@@ -80,7 +80,7 @@ export default function HomePage() {
 
           <Reveal delay={160}>
             <p className="text-lg md:text-xl text-gray-600 mb-9 leading-relaxed max-w-2xl mx-auto">
-              We help B2B and B2C businesses scale through SEO, Social Media, PPC, Web Design, and Content â€” delivering real results, not vanity metrics.
+              We help B2B and B2C businesses scale through SEO, Social Media, PPC, Web Design, and Content &mdash; delivering real results, not vanity metrics.
             </p>
           </Reveal>
 
@@ -103,7 +103,7 @@ export default function HomePage() {
 
           <Reveal delay={320}>
             <p className="mt-8 text-sm text-gray-500 flex items-center justify-center gap-2">
-              <span className="text-yellow-400 tracking-tight">â˜…â˜…â˜…â˜…â˜…</span>
+              <span className="text-yellow-400 tracking-tight">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               Rated 4.9/5 by 643+ happy clients
             </p>
           </Reveal>
@@ -116,7 +116,7 @@ export default function HomePage() {
           {[...TRUST_WORDS, ...TRUST_WORDS].map((word, i) => (
             <span key={i} className="text-gray-400 font-semibold text-sm uppercase tracking-widest flex items-center gap-12">
               {word}
-              <span className="text-blue-300">â—†</span>
+              <span className="text-blue-300">&#9670;</span>
             </span>
           ))}
         </div>
@@ -155,7 +155,7 @@ export default function HomePage() {
               Full-Stack Digital Marketing Services
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              From search rankings to social media growth â€” we cover every channel your customers use.
+              From search rankings to social media growth &mdash; we cover every channel your customers use.
             </p>
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -174,7 +174,7 @@ export default function HomePage() {
                   </h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{service.description}</p>
                   <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                    Learn more â†’
+                    Learn more &rarr;
                   </span>
                 </Link>
               </Reveal>
@@ -185,7 +185,7 @@ export default function HomePage() {
               href="/services"
               className="btn-shine inline-flex items-center gap-2 bg-linear-to-r from-blue-600 to-cyan-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 transition-all duration-300"
             >
-              View All 15 Services â†’
+              View All 15 Services &rarr;
             </Link>
           </Reveal>
         </div>
@@ -198,14 +198,14 @@ export default function HomePage() {
             <Reveal>
               <span className="text-blue-600 font-semibold text-sm uppercase tracking-widest">Why Kharb Media</span>
               <h2 className="text-3xl md:text-4xl font-black text-gray-900 mt-2 mb-6">
-                We Don&apos;t Just Run Campaigns â€” We Drive Growth
+                We Don&apos;t Just Run Campaigns &mdash; We Drive Growth
               </h2>
               <div className="space-y-3">
                 {[
-                  { icon: "ðŸ“Š", title: "100% Data-Driven", desc: "Every decision is backed by analytics, testing, and performance data â€” no guesswork." },
-                  { icon: "ðŸ¤", title: "Long-Term Partnership", desc: "We build lasting relationships focused on sustainable growth, not short-term wins." },
-                  { icon: "ðŸ”", title: "Transparent Reporting", desc: "You always know what we're doing and why â€” clear monthly reports, no fluff." },
-                  { icon: "ðŸ†", title: "Proven Track Record", desc: "282+ completed projects and 643+ 5-star reviews across industries." },
+                  { icon: "📊", title: "100% Data-Driven", desc: "Every decision is backed by analytics, testing, and performance data — no guesswork." },
+                  { icon: "🤝", title: "Long-Term Partnership", desc: "We build lasting relationships focused on sustainable growth, not short-term wins." },
+                  { icon: "🔍", title: "Transparent Reporting", desc: "You always know what we're doing and why — clear monthly reports, no fluff." },
+                  { icon: "🏆", title: "Proven Track Record", desc: "282+ completed projects and 643+ 5-star reviews across industries." },
                 ].map((item, i) => (
                   <Reveal key={item.title} delay={i * 80}>
                     <div className="card-hover flex gap-4 rounded-xl p-3 hover:bg-white hover:shadow-md">
@@ -234,7 +234,7 @@ export default function HomePage() {
                     Founded by Vivek Kharb, our agency brings 8 years of hands-on digital marketing expertise to every client engagement. We&apos;ve helped businesses across industries multiply their revenue through smart, scalable strategies.
                   </p>
                   <Link href="/about" className="inline-flex items-center gap-1 text-blue-600 font-semibold hover:gap-2 transition-all">
-                    Meet Our Team â†’
+                    Meet Our Team &rarr;
                   </Link>
                 </div>
               </div>
@@ -252,7 +252,7 @@ export default function HomePage() {
               What Our Clients Say
             </h2>
             <p className="text-yellow-500 text-2xl mt-2">
-              â˜…â˜…â˜…â˜…â˜… <span className="text-gray-500 text-base">4.9/5 from 643+ reviews</span>
+              &#9733;&#9733;&#9733;&#9733;&#9733; <span className="text-gray-500 text-base">4.9/5 from 643+ reviews</span>
             </p>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -260,7 +260,7 @@ export default function HomePage() {
               <Reveal key={t.name} delay={(i % 2) * 100}>
                 <div className="card-hover relative h-full bg-linear-to-br from-gray-50 to-white rounded-2xl p-7 border border-gray-100 hover:shadow-xl hover:shadow-blue-500/5">
                   <span className="absolute top-5 right-6 text-6xl leading-none text-blue-100 font-serif select-none" aria-hidden>&rdquo;</span>
-                  <p className="text-yellow-400 mb-3">{"â˜…".repeat(t.rating)}</p>
+                  <p className="text-yellow-400 mb-3">{"★".repeat(t.rating)}</p>
                   <p className="text-gray-700 leading-relaxed mb-5 italic relative z-10">&ldquo;{t.text}&rdquo;</p>
                   <div className="flex items-center gap-3">
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-br from-blue-600 to-cyan-500 text-white font-bold text-sm">
@@ -326,7 +326,7 @@ export default function HomePage() {
                     </span>
                   </div>
                   <div className="p-5">
-                    <span className="text-xs text-gray-400">{post.date} Â· {post.readTime}</span>
+                    <span className="text-xs text-gray-400">{post.date} &middot; {post.readTime}</span>
                     <h3 className="font-bold text-gray-900 mt-2 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
                       {post.title}
                     </h3>
@@ -338,7 +338,7 @@ export default function HomePage() {
           </div>
           <Reveal className="text-center mt-10">
             <Link href="/blog" className="inline-flex items-center gap-1 text-blue-600 font-semibold hover:gap-2 transition-all">
-              View All Articles â†’
+              View All Articles &rarr;
             </Link>
           </Reveal>
         </div>
@@ -375,7 +375,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="btn-shine bg-green-500 text-white font-bold px-8 py-4 rounded-xl hover:bg-green-600 hover:-translate-y-1 transition-all duration-300 text-lg shadow-xl"
               >
-                ðŸ’¬ WhatsApp Us
+                &#128172; WhatsApp Us
               </a>
             </div>
           </Reveal>

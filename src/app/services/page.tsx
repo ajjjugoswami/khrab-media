@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE, SERVICES, STATS } from "@/lib/data";
 import Reveal from "@/components/Reveal";
@@ -7,7 +7,7 @@ import CountUp from "@/components/CountUp";
 export const metadata: Metadata = {
   title: "Digital Marketing Services",
   description:
-    "Explore all 15 digital marketing services offered by Kharb Media â€” SEO, Social Media, PPC, Web Design, Video Editing, and more.",
+    "Explore all 15 digital marketing services offered by Kharb Media — SEO, Social Media, PPC, Web Design, Video Editing, and more.",
   alternates: { canonical: `${SITE.url}/services` },
   openGraph: {
     title: "Digital Marketing Services | Kharb Media",
@@ -58,7 +58,7 @@ export default function ServicesPage() {
           </Reveal>
           <Reveal delay={160}>
             <p className="text-gray-600 text-lg leading-relaxed">
-              From organic search to paid ads, social media to web development â€” we offer every digital marketing service your business needs to grow, packaged into custom strategies that deliver results.
+              From organic search to paid ads, social media to web development &mdash; we offer every digital marketing service your business needs to grow, packaged into custom strategies that deliver results.
             </p>
           </Reveal>
         </div>
@@ -97,7 +97,7 @@ export default function ServicesPage() {
                   <ul className="space-y-2 mb-6">
                     {service.features.map((f) => (
                       <li key={f} className="flex items-center gap-2 text-sm text-gray-600">
-                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600 text-[10px] font-bold">âœ“</span> {f}
+                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600 text-[10px] font-bold">&#10003;</span> {f}
                       </li>
                     ))}
                   </ul>
