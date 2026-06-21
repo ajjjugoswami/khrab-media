@@ -14,7 +14,7 @@ export default function NotFound() {
           The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <div className="flex gap-3 justify-center">
-          <Link href="/" className="btn-shine bg-linear-to-r from-blue-600 to-cyan-500 text-white font-semibold px-5 py-2.5 rounded-lg hover:-translate-y-0.5 transition-all shadow-lg shadow-blue-500/25">
+          <Link href="/" className="btn-shine btn-primary px-5 py-2.5 rounded-lg">
             Go Home
           </Link>
           <Link href="/contact" className="glass text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-white/10 transition-colors">

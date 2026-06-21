@@ -112,7 +112,7 @@ export default function ServicesPage() {
                     </ul>
                     <Link
                       href="/contact"
-                      className="btn-shine inline-block bg-linear-to-r from-blue-600 to-cyan-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-md shadow-blue-500/25 hover:-translate-y-0.5 transition-all duration-300"
+                      className="btn-shine btn-primary inline-block text-sm px-5 py-2.5 rounded-lg"
                     >
                       Get Started
                     </Link>
@@ -128,14 +128,6 @@ export default function ServicesPage() {
       <section className="relative overflow-hidden py-20">
         <div className="container-custom relative z-10 max-w-3xl mx-auto">
           <div className="glass-card relative rounded-3xl p-12 text-center overflow-hidden">
-            <div
-              className="absolute inset-0 opacity-70 pointer-events-none"
-              aria-hidden
-              style={{
-                backgroundImage:
-                  "radial-gradient(600px circle at 15% 15%, rgba(37,99,235,0.28), transparent 60%), radial-gradient(600px circle at 85% 85%, rgba(34,211,238,0.22), transparent 60%)",
-              }}
-            />
             <div className="relative z-10">
               <Reveal>
                 <h2 className="text-3xl md:text-4xl font-black mb-4 text-white">Not Sure Which Service You Need?</h2>
@@ -148,7 +140,7 @@ export default function ServicesPage() {
               <Reveal delay={200}>
                 <Link
                   href="/contact"
-                  className="btn-shine bg-linear-to-r from-blue-600 to-cyan-500 text-white font-bold px-8 py-4 rounded-xl hover:-translate-y-1 transition-all duration-300 inline-block shadow-xl shadow-blue-500/30"
+                  className="btn-shine btn-primary px-8 py-4 rounded-xl inline-block"
                 >
                   Book Free Discovery Call
                 </Link>

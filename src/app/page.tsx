@@ -98,7 +98,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="btn-shine bg-linear-to-r from-blue-600 to-cyan-500 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-xl shadow-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/50 hover:-translate-y-1 transition-all duration-300"
+                className="btn-shine btn-primary px-8 py-4 rounded-xl text-lg"
               >
                 Get a Free Consultation
               </Link>
@@ -195,7 +195,7 @@ export default function HomePage() {
           <Reveal className="text-center mt-12">
             <Link
               href="/services"
-              className="btn-shine inline-flex items-center gap-2 bg-linear-to-r from-blue-600 to-cyan-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-500/25 hover:-translate-y-0.5 transition-all duration-300"
+              className="btn-shine btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-xl"
             >
               View All 15 Services <FiArrowRight className="h-4 w-4" />
             </Link>
@@ -369,14 +369,6 @@ export default function HomePage() {
       <section className="relative overflow-hidden py-20">
         <div className="container-custom relative z-10">
           <div className="glass-card relative rounded-3xl p-12 text-center overflow-hidden">
-            <div
-              className="absolute inset-0 opacity-70 pointer-events-none"
-              aria-hidden
-              style={{
-                backgroundImage:
-                  "radial-gradient(600px circle at 15% 15%, rgba(37,99,235,0.28), transparent 60%), radial-gradient(600px circle at 85% 85%, rgba(34,211,238,0.22), transparent 60%)",
-              }}
-            />
             <div className="relative z-10">
               <Reveal>
                 <h2 className="text-3xl md:text-5xl font-black mb-4 text-white">
@@ -392,7 +384,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     href="/contact"
-                    className="btn-shine bg-linear-to-r from-blue-600 to-cyan-500 text-white font-bold px-8 py-4 rounded-xl hover:-translate-y-1 transition-all duration-300 text-lg shadow-xl shadow-blue-500/30"
+                    className="btn-shine btn-primary px-8 py-4 rounded-xl text-lg"
                   >
                     Book Free Consultation
                   </Link>

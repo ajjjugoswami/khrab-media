@@ -31,7 +31,7 @@ export default function Footer() {
             </div>
             <Link
               href="/contact"
-              className="btn-shine shrink-0 inline-flex items-center gap-2 bg-linear-to-r from-blue-600 to-cyan-500 text-white font-bold px-7 py-4 rounded-xl shadow-xl shadow-blue-500/30 hover:-translate-y-1 transition-all duration-300"
+              className="btn-shine btn-primary shrink-0 inline-flex items-center gap-2 px-7 py-4 rounded-xl"
             >
               Get Started <ArrowRight className="h-5 w-5" />
             </Link>

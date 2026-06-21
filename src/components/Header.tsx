@@ -88,7 +88,7 @@ export default function Header() {
           </a>
           <Link
             href="/contact"
-            className="btn-shine bg-linear-to-r from-blue-600 to-cyan-500 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300"
+            className="btn-shine btn-primary text-sm px-4 py-2 rounded-lg"
           >
             Free Consultation
           </Link>
@@ -127,7 +127,7 @@ export default function Header() {
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="mt-2 bg-linear-to-r from-blue-600 to-cyan-500 text-white text-sm font-semibold px-4 py-2.5 rounded-lg text-center shadow-lg shadow-blue-500/25"
+            className="mt-2 btn-primary text-sm px-4 py-2.5 rounded-lg text-center"
           >
             Free Consultation
           </Link>

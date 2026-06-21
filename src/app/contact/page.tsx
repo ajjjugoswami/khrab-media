@@ -133,7 +133,7 @@ export default function ContactPage() {
                   href="https://topmate.io/kharbmedia"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-linear-to-r from-blue-600 to-cyan-500 text-white font-semibold px-5 py-2.5 rounded-lg hover:-translate-y-0.5 transition-all text-sm shadow-md shadow-blue-500/25"
+                  className="btn-primary inline-block px-5 py-2.5 rounded-lg text-sm"
                 >
                   Book on Topmate
                 </a>
