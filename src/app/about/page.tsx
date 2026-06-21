@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { SITE, STATS, TEAM, TESTIMONIALS } from "@/lib/data";
 import Reveal from "@/components/Reveal";
 import CountUp from "@/components/CountUp";
@@ -106,24 +107,40 @@ export default function AboutPage() {
                 </p>
               </div>
             </Reveal>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { title: "Client Focus", desc: "Your goals are our goals. We align every strategy to your business outcomes.", Icon: FiTarget },
-                { title: "Proven Results", desc: "282+ projects completed with measurable, documented growth.", Icon: FiTrendingUp },
-                { title: "Decades of Experience", desc: "Our team brings 15+ years of collective industry expertise.", Icon: FiAward },
-                { title: "Dedicated Team", desc: "45+ specialists committed to your success every day.", Icon: FiUsers },
-              ].map((v, i) => (
-                <Reveal key={v.title} delay={i * 80}>
-                  <div className="card-hover glass-card h-full rounded-2xl p-5 overflow-hidden">
-                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-blue-600 to-cyan-500 text-white mb-3 shadow-md shadow-blue-500/30">
-                      <v.Icon className="h-5 w-5" />
-                    </span>
-                    <h3 className="font-bold text-white mb-1">{v.title}</h3>
-                    <p className="text-gray-400 text-sm">{v.desc}</p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
+            <Reveal delay={150}>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-linear-to-br from-blue-600/20 to-cyan-500/20 rounded-3xl blur-2xl" aria-hidden />
+                <div className="glass-card relative rounded-3xl overflow-hidden">
+                  <Image
+                    src="/about-team.webp"
+                    alt="Kharb Media digital marketing team in discussion"
+                    width={1024}
+                    height={932}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Value cards */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+            {[
+              { title: "Client Focus", desc: "Your goals are our goals. We align every strategy to your business outcomes.", Icon: FiTarget },
+              { title: "Proven Results", desc: "282+ projects completed with measurable, documented growth.", Icon: FiTrendingUp },
+              { title: "Decades of Experience", desc: "Our team brings 15+ years of collective industry expertise.", Icon: FiAward },
+              { title: "Dedicated Team", desc: "45+ specialists committed to your success every day.", Icon: FiUsers },
+            ].map((v, i) => (
+              <Reveal key={v.title} delay={i * 80}>
+                <div className="card-hover glass-card h-full rounded-2xl p-5 overflow-hidden">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-blue-600 to-cyan-500 text-white mb-3 shadow-md shadow-blue-500/30">
+                    <v.Icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="font-bold text-white mb-1">{v.title}</h3>
+                  <p className="text-gray-400 text-sm">{v.desc}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

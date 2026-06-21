@@ -2,7 +2,11 @@ export const SITE = {
   name: "Kharb Media",
   tagline: "Results-Driven Digital Marketing Agency",
   description:
-    "Kharb Media is a data-driven digital marketing agency delivering SEO, social media, web design, PPC, and content strategies that grow your business.",
+    "Kharb Media is a results-driven, remote digital marketing agency dedicated to helping B2B and B2C brands thrive through SEO, social media, web design, PPC, and content.",
+  // Hero copy from the live site
+  heroHeadline: "Unlock Unstoppable Growth with the Leading B2B and B2C Digital Marketing Agency",
+  heroSubheading:
+    "Welcome to Kharb Media. We are a results-driven, remote digital marketing agency dedicated to helping brands just like yours thrive.",
   url: "https://kharbmedia.com",
   phone: "+91 9728785818",
   email: "support@kharbmedia.com",
@@ -16,10 +20,10 @@ export const SITE = {
 };
 
 export const STATS = [
-  { value: "282+", label: "Projects Completed" },
+  { value: "282+", label: "Success Projects" },
   { value: "266+", label: "Satisfied Clients" },
   { value: "45+", label: "Expert Team Members" },
-  { value: "4.9/5", label: "Rating (643 Reviews)" },
+  { value: "25+", label: "Awards Won" },
 ];
 
 export const SERVICES = [
@@ -28,8 +32,9 @@ export const SERVICES = [
     title: "Search Engine Optimization (SEO)",
     short: "SEO",
     icon: "🔍",
+    image: "/services/seo.webp",
     description:
-      "Proven strategies to get your website to the top of Google's search results and drive organic traffic that converts.",
+      "We use proven strategies to get your website to the top of Google's search results and drive organic traffic that converts.",
     features: [
       "Keyword Research & Strategy",
       "On-Page Optimization",
@@ -43,8 +48,9 @@ export const SERVICES = [
     title: "Social Media Marketing (SMM)",
     short: "SMM",
     icon: "📱",
+    image: "/services/social-media-marketing.webp",
     description:
-      "Build a loyal community and grow your brand with targeted content creation and management across all major platforms.",
+      "We handle your social media presence, from creating engaging posts to building a loyal community across all major platforms.",
     features: [
       "Content Strategy & Creation",
       "Instagram & LinkedIn Management",
@@ -58,8 +64,9 @@ export const SERVICES = [
     title: "Web Design & Development",
     short: "Web Design",
     icon: "💻",
+    image: "/services/web-design-development.webp",
     description:
-      "Professional, modern websites that are fast, mobile-friendly, and built to convert visitors into paying customers.",
+      "Your website is your online storefront. We design and build professional, modern websites that are fast and built to convert.",
     features: [
       "Custom Design",
       "Mobile Responsive",
@@ -73,8 +80,9 @@ export const SERVICES = [
     title: "Pay-Per-Click Advertising (PPC)",
     short: "PPC",
     icon: "📊",
+    image: "/services/ppc-advertising.webp",
     description:
-      "Targeted ad campaigns on Google and social platforms that deliver fast, measurable results and maximum ROI.",
+      "We create and manage smart ad campaigns for you. Our targeted ads bring high-quality visitors and deliver maximum ROI.",
     features: [
       "Google Ads Management",
       "Meta Ads Campaigns",
@@ -88,8 +96,9 @@ export const SERVICES = [
     title: "Video Editing",
     short: "Video",
     icon: "🎬",
+    image: "/services/video-editing.webp",
     description:
-      "Professional video production and editing services — from raw footage to polished, engaging content ready to publish.",
+      "We take your raw footage and turn it into polished, professional videos that are ready to publish and engage your audience.",
     features: [
       "Short-Form Reels & TikToks",
       "YouTube Video Editing",
@@ -103,8 +112,9 @@ export const SERVICES = [
     title: "Email Marketing",
     short: "Email",
     icon: "📧",
+    image: "/services/email-marketing.webp",
     description:
-      "Personalized email campaigns that convert one-time buyers into loyal, repeat customers and brand advocates.",
+      "We design and manage smart email campaigns that turn your one-time buyers into loyal, repeat customers.",
     features: [
       "Campaign Strategy",
       "List Segmentation",
@@ -118,8 +128,9 @@ export const SERVICES = [
     title: "Instagram Viral Content Creation",
     short: "Content",
     icon: "✨",
+    image: "/services/content-creation.webp",
     description:
-      "Short-form video and image content crafted to go viral, grow followers, and attract your ideal customers on Instagram.",
+      "We specialize in creating short, engaging videos and images that get shared on Instagram, grow followers, and attract customers.",
     features: [
       "Reels Strategy",
       "Caption Copywriting",
@@ -133,8 +144,9 @@ export const SERVICES = [
     title: "Lead Generation",
     short: "Leads",
     icon: "🎯",
+    image: "/services/lead-generation.webp",
     description:
-      "Strategic campaigns across channels to attract qualified prospects and fill your sales pipeline consistently.",
+      "We create strategic campaigns that find and attract the right people for your business and fill your sales pipeline.",
     features: [
       "Funnel Design",
       "Landing Page Creation",
@@ -148,8 +160,9 @@ export const SERVICES = [
     title: "Local SEO",
     short: "Local SEO",
     icon: "📍",
+    image: "/services/local-seo.webp",
     description:
-      "Dominate Google Maps and local search results so nearby customers find and choose your business first.",
+      "We'll help you get to the top of Google Maps and local search results so nearby customers find and choose you first.",
     features: [
       "Google Business Profile Optimization",
       "Local Citation Building",
@@ -163,8 +176,9 @@ export const SERVICES = [
     title: "LinkedIn Personal Branding",
     short: "LinkedIn",
     icon: "💼",
+    image: "/services/linkedin-branding.webp",
     description:
-      "Professional profile optimization and content strategy to establish your authority and attract B2B connections.",
+      "We help you build a powerful presence that attracts new connections and shows off your expertise to attract B2B clients.",
     features: [
       "Profile Optimization",
       "Content Strategy",
@@ -178,8 +192,9 @@ export const SERVICES = [
     title: "Conversion Rate Optimization (CRO)",
     short: "CRO",
     icon: "📈",
+    image: "/services/cro.webp",
     description:
-      "In-depth website analysis and testing to turn more of your existing visitors into paying customers.",
+      "We analyze your website to see why people are leaving. We then make smart changes to turn more visitors into customers.",
     features: [
       "Heatmap Analysis",
       "A/B Testing",
@@ -193,8 +208,9 @@ export const SERVICES = [
     title: "Graphic Designing",
     short: "Design",
     icon: "🎨",
+    image: "/services/graphic-design.webp",
     description:
-      "Logo, website, and social media visuals that communicate your brand professionally and memorably.",
+      "Our design team creates visuals that are clean, modern, and professional — communicating your brand memorably.",
     features: [
       "Logo Design",
       "Brand Identity Kits",
@@ -208,8 +224,9 @@ export const SERVICES = [
     title: "Online Reputation Management",
     short: "ORM",
     icon: "⭐",
+    image: "/services/online-reputation.webp",
     description:
-      "Monitor, manage, and improve your brand's online reputation by building trust and handling reviews strategically.",
+      "We help you build and manage a great online reputation. This includes getting reviews and handling them strategically.",
     features: [
       "Review Monitoring",
       "Negative Review Response",
@@ -223,8 +240,9 @@ export const SERVICES = [
     title: "Influencer Marketing",
     short: "Influencer",
     icon: "🌟",
+    image: "/services/influencer-marketing.webp",
     description:
-      "Strategic brand-influencer partnerships that expand your audience reach and build authentic social proof.",
+      "We connect your brand with social media influencers who have an audience, expanding your reach and building social proof.",
     features: [
       "Influencer Research & Vetting",
       "Campaign Strategy",
@@ -238,8 +256,9 @@ export const SERVICES = [
     title: "Mobile App Marketing (ASO & Ads)",
     short: "ASO",
     icon: "📲",
+    image: "/services/aso.webp",
     description:
-      "App store optimization and mobile-focused ad campaigns to increase downloads and grow your app user base.",
+      "We help your business connect with customers on their phones and tablets to increase downloads and grow your user base.",
     features: [
       "App Store Optimization",
       "Keyword Research for Apps",
@@ -286,24 +305,28 @@ export const TESTIMONIALS = [
 
 export const FAQS = [
   {
-    q: "How long before I see results?",
-    a: "SEO results typically begin showing within 3–6 months. PPC and social media campaigns can generate results within the first week of launch.",
+    q: "What services does your digital agency provide?",
+    a: "As a full-service B2C digital marketing agency, we offer a wide range of solutions, including SEO, content creation, social media marketing, and paid advertising.",
   },
   {
-    q: "Do you work with small businesses?",
-    a: "Absolutely. We work with businesses of all sizes — from startups and local shops to established enterprises across B2B and B2C sectors.",
+    q: "How much does a marketing campaign cost?",
+    a: "The digital marketing agency fee depends on your goals and the services you need. We have simple, all-inclusive packages that start at a certain price per month.",
   },
   {
-    q: "What makes Kharb Media different?",
-    a: "We are 100% data-driven, transparent in our reporting, and treat every client as a long-term partner — not just a contract. Your success is our success.",
+    q: "How long does it take to see results?",
+    a: "Most clients start to see significant improvements in their website traffic and leads within the first three to six months.",
   },
   {
-    q: "Can I get a free consultation?",
-    a: "Yes! Book a free discovery call with our team via Topmate. We'll analyze your current situation and recommend a strategy tailored to your goals.",
+    q: "Are digital marketing agencies worth it?",
+    a: "Yes. For most businesses, hiring an agency is a smart investment that delivers a strong return through expert strategy and execution.",
   },
   {
-    q: "Do you offer customized packages?",
-    a: "Every business is unique. We build custom strategies based on your goals, industry, budget, and competitive landscape.",
+    q: "Do you create content for our brand?",
+    a: "Yes, our team creates high-quality content that is tailored to your brand and designed to connect with your audience.",
+  },
+  {
+    q: "How long does it take to complete a website project?",
+    a: "A simple website for a small business can be done in as little as 4-6 weeks, while a more complex site can take several months.",
   },
 ];
 

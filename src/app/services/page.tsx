@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { SITE, SERVICES, STATS } from "@/lib/data";
 import Reveal from "@/components/Reveal";
 import CountUp from "@/components/CountUp";
@@ -92,12 +93,23 @@ export default function ServicesPage() {
                 <Reveal key={service.slug} delay={(i % 3) * 90}>
                   <div
                     id={service.slug}
-                    className="card-hover glass-card group relative h-full rounded-2xl p-7 scroll-mt-24 overflow-hidden"
+                    className="card-hover glass-card group relative h-full rounded-2xl scroll-mt-24 overflow-hidden"
                   >
-                    <span className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-blue-500 to-cyan-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-                    <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-blue-600 to-cyan-500 text-white mb-5 shadow-lg shadow-blue-500/30 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
-                      <Icon className="h-7 w-7" />
+                    {/* Real service image */}
+                    <div className="relative h-44 overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-t from-[#0a0f1e] via-[#0a0f1e]/40 to-transparent" />
+                      <div className="absolute bottom-3 left-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-blue-600 to-cyan-500 text-white shadow-lg">
+                        <Icon className="h-6 w-6" />
+                      </div>
                     </div>
+                    <div className="p-7 pt-5">
                     <h2 className="text-xl font-black text-white mb-3">{service.title}</h2>
                     <p className="text-gray-400 text-sm leading-relaxed mb-5">{service.description}</p>
                     <ul className="space-y-2 mb-6">
@@ -116,6 +128,7 @@ export default function ServicesPage() {
                     >
                       Get Started
                     </Link>
+                    </div>
                   </div>
                 </Reveal>
               );

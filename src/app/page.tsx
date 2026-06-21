@@ -82,15 +82,13 @@ export default function HomePage() {
 
           <Reveal delay={80}>
             <h1 className="text-4xl md:text-6xl font-black text-white leading-[1.08] mb-6">
-              Grow Your Business with{" "}
-              <span className="text-gradient animate-gradient">Data-Driven</span>{" "}
-              Digital Marketing
+              Unlock <span className="text-gradient animate-gradient">Unstoppable Growth</span> with the Leading B2B &amp; B2C Digital Marketing Agency
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="text-lg md:text-xl text-gray-300 mb-9 leading-relaxed max-w-2xl mx-auto">
-              We help B2B and B2C businesses scale through SEO, Social Media, PPC, Web Design, and Content &mdash; delivering real results, not vanity metrics.
+              Welcome to Kharb Media. We are a results-driven, remote digital marketing agency dedicated to helping brands just like yours thrive.
             </p>
           </Reveal>
 
